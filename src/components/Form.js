@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Form = ({ inputText, setInputText, todos, setTodos }) => {
+const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
   //Funtion to change state
   const inputTextHandler = (e) => {
     console.log(e.target.value);
@@ -19,8 +19,8 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
   };
 
   const statusHandler = (e) => {
-    console.log(e.target.value);
-  } 
+    setStatus(e.target.value);
+  }
 
   return (
     <form>
