@@ -4,7 +4,6 @@ import React from "react";
 const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
   //Funtion to change state
   const inputTextHandler = (e) => {
-    console.log(e.target.value);
     setInputText(e.target.value);
   };
 
