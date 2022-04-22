@@ -93,7 +93,8 @@ form button:hover {
 
 .completed {
   text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 1.5;
+  color: #ff6f47;
 }
 
 /*CUSTOM SELECTOR */
