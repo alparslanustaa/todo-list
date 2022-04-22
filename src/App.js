@@ -13,25 +13,24 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([]);
   //USE EFFECT
   useEffect(() => {
+    //events and functions
+    const filterHandler = () => {
+      switch (status) {
+        case "completed":
+          setFilteredTodos(todos.filter(todo => todo.completed === true));
+          break;
+        case "uncompleted":
+          setFilteredTodos(todos.filter(todo => todo.completed === false));
+          break;
+        default:
+          setFilteredTodos(todos);
+          break;
+      }
+    };
     filterHandler();
+
   }, [todos, status]);
-
-
-  //events and functions
-  const filterHandler = () => {
-    switch (status) {
-      case "completed":
-        setFilteredTodos(todos.filter(todo => todo.completed === true));
-        break;
-      case "uncompleted":
-        setFilteredTodos(todos.filter(todo => todo.completed === false));
-        break;
-      default:
-        setFilteredTodos(todos);
-        break;
-    }
-  };
-
+  
   return (
     <div className='App'>
       <header>
@@ -43,7 +42,7 @@ function App() {
         inputText={inputText}
         todos={todos}
         setStatus={setStatus}
-        
+
       />
 
       <TodoList
