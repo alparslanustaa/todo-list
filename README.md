@@ -1,6 +1,6 @@
 # TODO LIST APP
 
-Todo list app is a simple task noting app whoch allowes users to create, maintain and manage their tasks in an organized list.
+Todo list app is a simple task taking app whoch allowes users to create, maintain and manage their tasks in an organized list.
 Users can sellect tasks in three categories.
 
 Build with React, Css
